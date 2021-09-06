@@ -1,6 +1,6 @@
 import { createTheme } from "@material-ui/core"
 
-export const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: "#F8C036",
@@ -37,3 +37,5 @@ export const theme = createTheme({
     },
   },
 })
+
+export default theme

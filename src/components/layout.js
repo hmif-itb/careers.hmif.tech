@@ -1,11 +1,12 @@
 import * as React from "react"
 import { ThemeProvider } from "@material-ui/styles"
-import { theme } from "../theme"
+import { responsiveFontSizes } from "@material-ui/core/styles"
+import theme from "../theme"
 // import Navbar from "./navbar"
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={responsiveFontSizes(theme)}>
       {/* <Navbar /> */}
       <div className="">
         <main>
