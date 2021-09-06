@@ -9,7 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem"
 import Menu from "@material-ui/core/Menu"
 import Button from "@material-ui/core/Button"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
-import { Link } from "gatsby-theme-material-ui"
+// import { Link } from "gatsby-theme-material-ui"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,9 +46,9 @@ const Navbar = props => {
     setAnchorEl(null)
   }
 
-  const handleButtonClick = pageURL => {
-    history.push(pageURL)
-  }
+  // const handleButtonClick = pageURL => {
+  //   history.push(pageURL)
+  // }
 
   const menuItems = [
     {

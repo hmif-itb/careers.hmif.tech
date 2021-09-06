@@ -18,6 +18,7 @@ const Article = () => {
       </Typography>
 
       <img
+        alt=""
         className="mt-3"
         src="/sample-img-4.jpg"
         style={{
@@ -35,7 +36,7 @@ const Article = () => {
         qui officia deserunt mollit anim id est laborum.
       </Typography>
 
-      <img src="/sample-img-2.jpeg" className="mt-3" />
+      <img src="/sample-img-2.jpeg" alt="" className="mt-3" />
 
       <Typography className="mt-3">
         Article paragraphy 1 Lorem ipsum dolor sit amet, consectetur adipiscing

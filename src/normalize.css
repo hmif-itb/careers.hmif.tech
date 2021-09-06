@@ -341,3 +341,7 @@ summary {
 [hidden] {
   display: none;
 }
+
+.container {
+  max-width: 800px;
+}
