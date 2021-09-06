@@ -1,88 +1,159 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import { Button, Card, CardContent, Grid, Typography } from "@material-ui/core"
+import Carousel from "react-material-ui-carousel"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
-
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+const Home = () => {
+  const events = [
+    {
+      title: "Event 1",
+      description: "Description event 1",
+      image: "sample-img-1.jpeg",
+    },
+    {
+      title: "Event 2222222",
+      description:
+        "Description event 2222222222222222222222 Description event Description event Description event",
+      image: "sample-img-2.jpeg",
+    },
+    {
+      title: "Event 3 gan",
+      description: "Description event 3 gan",
+      image: "sample-img-3.jpg",
+    },
+  ]
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+    <Layout>
+      <Typography variant="h1">Career HMIF ITB</Typography>
+      <Typography variant="subtitle1">
+        We provide you with the best career resources. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Typography>
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
+      <div className="mt-5">
+        <Typography variant="h4">Mentoring</Typography>
+        <Typography variant="subtitle2">
+          Meet the best mentor according to your career path preference. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </Typography>
+        <div className="d-flex justify-content-end">
+          <Button
+            color={"Secondary"}
+            variant={"contained"}
+            href="/mentoring"
+            className="mt-3"
+            style={{
+              textDecoration: "none",
+              color: "#FFFFFF",
+            }}
+          >
+            Register here !
+          </Button>
+        </div>
+      </div>
+
+      <div className="mt-5">
+        <Typography variant="h4">Events</Typography>
+        <Carousel autoPlay={true} animation="slide">
+          {events.map((event, idx) => {
+            return (
+              <div
+                key={idx}
+                style={{
+                  height: "300px",
+                }}
               >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+                <Card raised>
+                  <Grid container spacing={0}>
+                    <Grid item xs={8}>
+                      <img
+                        src={`/${event.image}`}
+                        style={{
+                          width: "100%",
+                        }}
+                      />
+                    </Grid>
+                    <Grid item xs={4}>
+                      <CardContent className="card-content">
+                        <Typography variant="h6" className="card-text">
+                          {event.title}
+                        </Typography>
+                        <Typography variant="subtitle2" className="card-text">
+                          {event.description}
+                        </Typography>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
+                </Card>
+              </div>
+            )
+          })}
+        </Carousel>
+      </div>
+
+      <div className="mt-5">
+        <Typography variant="h4">Articles</Typography>
+        <Typography variant="subtitle2">
+          Career HMIF ITB provide you with the best quality article. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </Typography>
+        <Button
+          color={"Secondary"}
+          variant={"contained"}
+          href="/article"
+          className="mt-3"
+          style={{
+            textDecoration: "none",
+            color: "#FFFFFF",
+          }}
+        >
+          Check the articles here !
+        </Button>
+      </div>
+
+      <style>
+        {`
+          .card-content {
+            background-color: #1A202C;
+            height: 100%;
+          }
+
+          .card-text {
+            color: #FFFFFF
+          }
+        `}
+      </style>
     </Layout>
   )
 }
 
-export default BlogIndex
+export default Home
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
       }
     }
   }

@@ -8,6 +8,10 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "bootstrap": "^5.1.0",
     "gatsby": "^3.10.1",
     "gatsby-plugin-feed": "^3.10.0",
     "gatsby-plugin-gatsby-cloud": "^2.10.0",
@@ -23,12 +27,15 @@
     "gatsby-remark-responsive-iframe": "^4.7.0",
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-theme-material-ui": "^2.0.1",
     "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "prismjs": "^1.24.1",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-material-ui-carousel": "^2.3.1",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
