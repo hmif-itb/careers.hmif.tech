@@ -7,7 +7,7 @@ const MentorCard = ({ mentor }) => {
       <div
         style={{
           backgroundColor: "#F8C036",
-          padding: "1rem",
+          // padding: ".5rem",
           borderRadius: "7px",
           height: "100%",
           boxShadow: "0px 3px 10px 2px rgba(0, 0, 0, 0.25)",
@@ -20,15 +20,17 @@ const MentorCard = ({ mentor }) => {
           <img src={mentor.imgUrl} alt="mentor-image" />
         </div>
         <div className="mentor-desc">
-          <Typography variant="subtitle2" className="mentor-name">
+          <Typography variant="body1" className="mentor-name">
             {mentor.name}
           </Typography>
-          <Typography variant="subtitle2" className="mentor-experience">
-            <b>1.</b> {mentor.experience1}
+          <Typography variant="body2" className="mentor-experience">
+            1. {mentor.experience1}
           </Typography>
-          <Typography variant="subtitle2" className="mentor-experience">
-            <b>2.</b> {mentor.experience2}
-          </Typography>
+          {mentor.experience2 != "-" && (
+            <Typography variant="body2" className="mentor-experience">
+              2. {mentor.experience2}
+            </Typography>
+          )}
         </div>
 
         {/* <p>{mentor.name}</p>
@@ -39,14 +41,15 @@ const MentorCard = ({ mentor }) => {
       <style>
         {`
           .mentor-image-container {
-              position: relative;
-              width: 100%;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
           }
 
           .mentor-image-container:after {
-              content: "";
-              display: block;
-              padding-bottom: 100%;
+            content: "";
+            display: block;
+            padding-bottom: 100%;            
           }
 
           .mentor-image-container img {
@@ -60,20 +63,27 @@ const MentorCard = ({ mentor }) => {
             height: 100%;
             object-fit: cover;
             object-position: center center;
+            transition: 0.2s;
           }
 
+          .mentor-image-container img:hover {            
+            transform: scale(1.2);
+          }
           .mentor-name {
-            font-size: .75rem;
+            // font-size: .75rem;
             font-weight: 700;
           }
 
           .mentor-experience {
-            font-size: .7rem;
-            font-weight: 400;
+            // font-size: .7rem;
+            // font-weight: 400;
           }
 
           .mentor-desc {
-            margin-top: 2rem;
+            margin-top: .5rem;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            margin-bottom: 1rem;
           }
 
           @media only screen and (max-width: 767px) {
@@ -89,21 +99,21 @@ const MentorCard = ({ mentor }) => {
             }
 
             .mentor-name {
-              font-size: 1rem;
+              // font-size: 1rem;
             }
   
             .mentor-experience {
-              font-size: .85rem;
+              // font-size: .85rem;
             }
           }
 
           @media only screen and (max-width: 419px) {
             .mentor-name {
-              font-size: .75rem;
+              // font-size: .75rem;
             }
   
             .mentor-experience {
-              font-size: .7rem;
+              // font-size: .7rem;
             }
           }
           `}

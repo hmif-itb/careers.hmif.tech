@@ -85,6 +85,7 @@ body {
   height: 100vh;
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
+  background-color: rgba(26, 32, 44, var(--bg-opacity)) !important;
   /* color: var(--color-text); */
   overflow-x: hidden;
 }
@@ -336,4 +337,16 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+footer {
+  width: 100%;
+  /* height: 50px; */
+  font-family: Montserrat;
+  margin-top: 2rem;
+  --bg-opacity: 1;
+  background-color: #f8c033;
+  background-color: rgba(248, 192, 51, var(--bg-opacity));
+  display: grid;
+  place-items: center;
 }

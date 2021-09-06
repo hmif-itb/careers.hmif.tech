@@ -1,6 +1,7 @@
 export const PRODUCT_ROLE = "Product"
 export const ENGINEER_ROLE = "Engineer"
 export const DATA_ROLE = "Data"
+export const ALL_ROLES = "All Path"
 
 export const mentors = [
   {
