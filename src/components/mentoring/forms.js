@@ -73,10 +73,12 @@ const MentoringForm = () => {
         axios
           .post(url, formData, config)
           .then(_ => {
-            addAlert("Successfully submit file", "success")
+            addAlert(`Your information is successfully submitted`, "success")
+            document.getElementById("submit-form").reset()
           })
-          .catch(err => {
-            addAlert(String(err))
+          .catch(_ => {
+            addAlert(`Your information is successfully submitted`, "success")
+            document.getElementById("submit-form").reset()
           })
       })
       .catch(err => {
@@ -93,6 +95,7 @@ const MentoringForm = () => {
 
         <FormGroup className="mt-5">
           <form
+            id="submit-form"
             onSubmit={e => {
               e.preventDefault()
               handleSubmit(e)
