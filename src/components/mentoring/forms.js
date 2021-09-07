@@ -6,6 +6,7 @@ import {
   TextField,
   Typography,
   Button,
+  CircularProgress
 } from "@material-ui/core"
 import React, { useState, useRef } from "react"
 import "./index.css"
@@ -35,6 +36,7 @@ const MentoringForm = () => {
   const fileInput = useRef(null)
   const [pref1, setPref1] = useState(null)
   const [pref2, setPref2] = useState(null)
+  const [submitting, setSubmitting] = useState(false)
 
   const { addAlert } = useAlert()
 
@@ -49,10 +51,12 @@ const MentoringForm = () => {
     .then(_ => {
       addAlert(`Your information is successfully submitted`, "success")
       document.getElementById("submit-form").reset()
+      setSubmitting(false)
     })
     .catch(_ => {
       addAlert(`Submission failed, please retry`)
       document.getElementById("submit-form").reset()
+      setSubmitting(false)
     })
   }
 
@@ -114,6 +118,7 @@ const MentoringForm = () => {
           <form
             id="submit-form"
             onSubmit={e => {
+              setSubmitting(true)
               e.preventDefault()
               handleSubmit(e)
             }}
@@ -322,20 +327,28 @@ const MentoringForm = () => {
                 program mentoring hingga akhir.
               </Typography>
             </div>
-            <div className="d-flex justify-content-center">
-              <Button
-                color="primary"
-                variant="contained"
-                className="mt-5 mb-3"
-                type="submit"
-                size="large"
-                style={{
-                  textDecoration: "none",
-                }}
-              >
-                Submit Registration
-              </Button>
-            </div>
+            {submitting ? 
+              <div className="d-flex justify-content-center">
+                <CircularProgress 
+                  size={60}
+                />
+              </div> 
+                :
+              <div className="d-flex justify-content-center">
+                <Button
+                  color="primary"
+                  variant="contained"
+                  className="mt-5 mb-3"
+                  type="submit"
+                  size="large"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  Submit Registration
+                </Button>
+              </div>
+            }
           </form>
         </FormGroup>
       </div>
