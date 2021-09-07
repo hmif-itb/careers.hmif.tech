@@ -53,17 +53,9 @@ const Mentoring = () => {
       <Layout>
         <Biodata />
         <div style={{ maxWidth: "var(--maxWidth-4xl)", margin: "auto" }}>
-          {/* <Typography variant="h3" className="mb-5 text-center">
-            Mentoring HMIF ITB
-          </Typography> */}
-
           <Typography variant="h4" className="text-center">
             Register here!
           </Typography>
-          {/* <hr/>
-        <Typography variant="subtitle1">
-          Please fill in the fields below
-        </Typography> */}
 
           <FormGroup className="mt-5">
             <form
@@ -72,13 +64,23 @@ const Mentoring = () => {
                 handleClick()
               }}
             >
-              <div className="d-flex justify-content-between">
-                <TextField label="Name" style={{ width: "45%" }} />
-                <TextField label="NIM" style={{ width: "25%" }} />
-                <TextField label="ID Line" style={{ width: "25%" }} />
+              <div className="d-md-flex justify-content-between name-nim-id-container">
+                <TextField label="Name" className="name-input mt-4" />
+                <div className="d-flex justify-content-between nim-id-container mt-4">
+                  <TextField
+                    label="NIM"
+                    style={{ width: "47.5%" }}
+                    className="nim-id-input"
+                  />
+                  <TextField
+                    label="ID Line"
+                    style={{ width: "47.5%" }}
+                    className="nim-id-input"
+                  />
+                </div>
               </div>
 
-              <div className="mt-5">
+              <div className="mt-4">
                 <TextField
                   id="outlined-multiline-static"
                   label="Personal goal"
@@ -97,7 +99,7 @@ const Mentoring = () => {
                 </Typography>
               </div>
 
-              <div className="mt-5">
+              <div className="mt-4">
                 <TextField
                   id="outlined-multiline-static"
                   label="Hal yang ingin dipelajari selama mentoring"
@@ -109,41 +111,42 @@ const Mentoring = () => {
                 />
               </div>
 
-              <div className="d-flex justify-content-between mt-5">
-                <TextField
-                  id="filled-select-currency"
-                  select
-                  label="First preference"
-                  helperText="Please select your career path preference"
-                  // variant="filled"
-                  // color="secondary"
-                  style={{
-                    width: "49.5%",
-                  }}
-                >
-                  {careerPaths.map(option => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
-                <TextField
-                  id="filled-select-currency"
-                  select
-                  label="Second preference"
-                  helperText="Please select your career path preference"
-                  // variant="filled"
-                  // color="secondary"
-                  style={{
-                    width: "49.5%",
-                  }}
-                >
-                  {careerPaths.map(option => (
-                    <MenuItem key={option.value} value={option.value}>
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
+              <div className="d-md-flex justify-content-between mt-5">
+                <div className="pref-container mt-4">
+                  <TextField
+                    id="filled-select-currency"
+                    select
+                    label="First preference"
+                    helperText="Please select your career path preference"
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    {careerPaths.map(option => (
+                      <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </div>
+
+                <div className="pref-container mt-4">
+                  <TextField
+                    id="filled-select-currency"
+                    select
+                    label="Second preference"
+                    helperText="Please select your career path preference"
+                    style={{
+                      width: "100%",
+                    }}
+                  >
+                    {careerPaths.map(option => (
+                      <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </div>
               </div>
 
               <div className="mt-3">
@@ -212,6 +215,35 @@ const Mentoring = () => {
           </Snackbar>
         </div>
       </Layout>
+      <style>
+        {`
+          .name-input {
+            width: 45%;
+          }
+
+          .nim-id-container {
+            width: 50%;
+          }
+
+          .pref-container {
+            width: 49.5%;
+          }
+
+          @media only screen and (max-width: 767px) {
+            .name-input {
+              width: 100%;
+            }
+  
+            .nim-id-container {
+              width: 100%;
+            } 
+
+            .pref-container {
+              width: 100%;
+            }
+          }
+        `}
+      </style>
     </>
   )
 }

@@ -7,7 +7,6 @@ const MentorCard = ({ mentor }) => {
       <div
         style={{
           backgroundColor: "#F8C036",
-          // padding: ".5rem",
           borderRadius: "7px",
           height: "100%",
           boxShadow: "0px 3px 10px 2px rgba(0, 0, 0, 0.25)",
@@ -32,11 +31,6 @@ const MentorCard = ({ mentor }) => {
             </Typography>
           )}
         </div>
-
-        {/* <p>{mentor.name}</p>
-        <p>{mentor.role}</p>
-        <p>{mentor.experience1}</p>
-        <p>{mentor.experience2}</p> */}
       </div>
       <style>
         {`

@@ -67,23 +67,18 @@ const Biodata = () => {
               ))}
             </Select>
           </span>
-          {/* the */}
           mentors
         </Typography>
       </div>
       <div className="row d-flex justify-content-center">
         {mentorData.map(mentorData => {
-          return (
-            // <div>
-            mentorData.mentors.map((mentor, idx) => {
-              return (
-                <div className="col-sm-6 col-md-3 col-lg-2 mb-4" key={idx}>
-                  <MentorCard mentor={mentor} />
-                </div>
-              )
-            })
-            // </div>
-          )
+          return mentorData.mentors.map((mentor, idx) => {
+            return (
+              <div className="col-sm-6 col-md-3 col-lg-2 mb-4" key={idx}>
+                <MentorCard mentor={mentor} />
+              </div>
+            )
+          })
         })}
       </div>
 
