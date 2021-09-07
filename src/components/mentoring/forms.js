@@ -35,55 +35,63 @@ const MentoringForm = () => {
 
   const { addAlert } = useAlert()
 
+  const submitGoogleForm = (url, formData) => {
+    const config = {
+      mode: "no-cors",
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    }
+
+    axios
+    .post(url, formData, config)
+    .then(_ => {
+      addAlert(`Your information is successfully submitted`, "success")
+      document.getElementById("submit-form").reset()
+    })
+    .catch(_ => {
+      addAlert(`Your information is successfully submitted`, "success")
+      document.getElementById("submit-form").reset()
+    })
+  }
+
+  const submitWithFile = (uploadedFile, formData) => {
+    encodeBase64(uploadedFile)
+    .then(bin => {
+      const data = bin.split(",")[1]
+
+      return axios
+        .post(`${apiUrl}?filename=${uploadedFile.name}`, data)
+        .then(res => {
+          if (res.data.status === "SUCCESS") {
+            return res.data.fileUrl
+          } else {
+            return null
+          }
+        })
+    })
+    .then(res => {
+      formData.append(formEntry.cvUrl, res)
+      submitGoogleForm(formUrl, formData)
+    })
+    .catch(err => {
+      addAlert(String(err))
+    })
+  }
+
+  const submitWithoutFile = (formData) => {
+    formData.append(formEntry.cvUrl, "no CV uploaded")
+    submitGoogleForm(formUrl, formData)
+  }  
+
   const handleSubmit = event => {
     const uploadedFile = (file && (file.length > 0)) ? file[0] : null
-
-    encodeBase64(uploadedFile)
-      .then(bin => {
-        if (bin === null) {
-          return "no CV uploaded"
-        }
-
-        bin = bin.split(",")[1]
-        const data = bin
-
-        return axios
-          .post(`${apiUrl}?filename=${uploadedFile.name}`, data)
-          .then(res => {
-            if (res.data.status === "SUCCESS") {
-              return res.data.fileUrl
-            } else {
-              return null
-            }
-          })
-      })
-      .then(res => {
-        const url = formUrl
-
-        let formData = new FormData(event.target)
-        formData.append(formEntry.cvUrl, res)
-
-        const config = {
-          mode: "no-cors",
-          headers: {
-            "content-type": "multipart/form-data",
-          },
-        }
-
-        axios
-          .post(url, formData, config)
-          .then(_ => {
-            addAlert(`Your information is successfully submitted`, "success")
-            document.getElementById("submit-form").reset()
-          })
-          .catch(_ => {
-            addAlert(`Your information is successfully submitted`, "success")
-            document.getElementById("submit-form").reset()
-          })
-      })
-      .catch(err => {
-        addAlert(String(err))
-      })
+    let formData = new FormData(event.target)
+    if (uploadedFile) {
+      submitWithFile(uploadedFile, formData);
+    } else {
+      submitWithoutFile(formData);
+    }
   }
 
   return (
