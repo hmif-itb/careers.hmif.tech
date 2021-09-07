@@ -11,6 +11,10 @@
   border: 0;
 }
 
+.MuiFormControlLabel-root .MuiIconButton-label input {
+  display: none;
+}
+
 .MuiTypography-caption,
 .MuiTypography-caption > * {
   line-height: 70%;
