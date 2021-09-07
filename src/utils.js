@@ -1,4 +1,7 @@
-export const encodeBase64 = (inputFile) => {
+export const encodeBase64 = async (inputFile) => {
+  if (inputFile === null) {
+    return null;
+  }
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (e) => {
