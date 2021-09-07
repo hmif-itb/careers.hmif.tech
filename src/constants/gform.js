@@ -8,7 +8,9 @@ export const formEntry = {
     pref1: "entry.698577386",
     pref2: "entry.602033630",
     commit: "entry.389783269",
-    cvUrl: "entry.1807738968"
+    cvUrl: "entry.1807738968",
+    whyChooseYou: "entry.1016737415",
+    activity: "entry.19480908"
 }
 
 const formID = "1gFr4tTkGWirrkZqdp8-P_kASwJpTMfeqsiVHKPIx8SI"
