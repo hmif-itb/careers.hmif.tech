@@ -36,7 +36,7 @@ const MentoringForm = () => {
   const { addAlert } = useAlert()
 
   const handleSubmit = event => {
-    const uploadedFile = file ? file[0] : null
+    const uploadedFile = (file && (file.length > 0)) ? file[0] : null
 
     encodeBase64(uploadedFile)
       .then(bin => {
@@ -235,6 +235,7 @@ const MentoringForm = () => {
                 ref={fileInput}
                 onChange={e => setFile(e.target.files)}
                 style={{ display: "none" }}
+                accept="application/pdf"
               />
               <Button
                 variant="contained"
@@ -244,7 +245,7 @@ const MentoringForm = () => {
               >
                 Upload File
               </Button>
-              {file ? (
+              {(file && (file.length > 0)) ? (
                 <Typography variant="body1">{file[0].name}</Typography>
               ) : null}
             </div>
