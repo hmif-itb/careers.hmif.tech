@@ -52,10 +52,10 @@ const Biodata = () => {
       >
         <iframe
           src="https://docs.google.com/presentation/d/e/2PACX-1vTblelnEBFp-QWlRaAn38KzbI7K3TORytTlHG2rqW_jKih-E2TLkt3OmZRH13ptBTEpTdke1ZGBTtio/embed?start=false&loop=false&delayms=3000"
-          frameborder="0"
+          frameBorder="0"
           id="mentoring-slide"
           title="Slide"
-          allowfullscreen="true"
+          allowFullScreen={true}
           mozallowfullscreen="true"
           webkitallowfullscreen="true"
         ></iframe>
@@ -69,8 +69,8 @@ const Biodata = () => {
                 <Typography variant="h4">{ALL_ROLES}</Typography>
               </MenuItem>
 
-              {mentorAll.map(mentors => (
-                <MenuItem value={mentors.role}>
+              {mentorAll.map((mentors, i) => (
+                <MenuItem value={mentors.role} key={i}>
                   <Typography variant="h4">{mentors.role}</Typography>
                 </MenuItem>
               ))}

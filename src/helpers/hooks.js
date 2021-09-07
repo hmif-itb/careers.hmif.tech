@@ -20,11 +20,11 @@ export const useFormInput = initialValue => {
 }
 
 export const useWidth = () => {
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState(window?.innerWidth ?? 1000)
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth)
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    const handleResize = () => setWidth(window?.innerWidth)
+    window?.addEventListener("resize", handleResize)
+    return () => window?.removeEventListener("resize", handleResize)
   }, [width])
   const isLargeScreen = width > BREAKPOINT_WIDTH
   return { width, isLargeScreen }
