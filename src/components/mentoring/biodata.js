@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react"
+import React, { useState, useMemo, useEffect } from "react"
 import { MenuItem, Select, Typography } from "@material-ui/core"
 import {
   DATA_ROLE,
@@ -40,7 +40,7 @@ const Biodata = () => {
 
   const { width } = useWindowSize()
 
-  const isLargeScreen = useMemo(() => width > 767, [width])
+  const isLargeScreen = width > 767
 
   return (
     <>
