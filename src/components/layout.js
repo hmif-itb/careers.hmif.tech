@@ -1,13 +1,11 @@
 import * as React from "react"
-import { ThemeProvider } from "@material-ui/styles"
-import { responsiveFontSizes } from "@material-ui/core/styles"
-import theme from "../theme"
+
 // import { Typography } from "@material-ui/core"
 // import Navbar from "./navbar"
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={responsiveFontSizes(theme)}>
+    <>
       {/* <Navbar /> */}
       <div className="">
         <main>
@@ -21,7 +19,7 @@ const Layout = ({ children }) => {
           {/* </Typography> */}
         </footer>
       </div>
-    </ThemeProvider>
+    </>
   )
 }
 

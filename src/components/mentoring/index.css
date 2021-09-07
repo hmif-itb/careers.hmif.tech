@@ -12,3 +12,28 @@
   height: 100%;
   border: 0;
 }
+
+.MuiTypography-caption,
+.MuiTypography-caption > * {
+  line-height: 70%;
+}
+
+.justify-5-1 > * {
+  width: 47.5%;
+}
+
+.outlined-multiline-static {
+  width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .justify-5-1 {
+    flex-direction: column;
+  }
+  .justify-5-1 > * {
+    width: 100%;
+    margin-bottom: 1.5rem !important;
+  }
+  .justify-5-1.last {
+    margin-top: 0 !important;
+  }
+}
