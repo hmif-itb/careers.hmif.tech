@@ -7,14 +7,14 @@ export const mentors = [
   {
     name: "Gardahadi",
     role: PRODUCT_ROLE,
-    experience1: "Regional product Manager - Shopee Singapore",
-    experience2: "Associate Product Manager - AdaKerja",
+    experience1: "Regional Product Manager at Shopee Singapore",
+    experience2: "Associate Product Manager at AdaKerja",
     imgUrl: "https://i.ibb.co/4g9M0Rn/Gardahadi.jpg",
   },
   {
     name: "I Putu Gede Wirasuta",
     role: ENGINEER_ROLE,
-    experience1: "Software Engineer - Shopee Singapore",
+    experience1: "Software Engineer at Shopee Singapore",
     experience2: "Software Engineer Intern at Xendit",
     imgUrl: "https://i.ibb.co/0JwPTgX/I-Putu-Gede-Wirasuta.jpg",
   },
@@ -28,8 +28,9 @@ export const mentors = [
   {
     name: "Muhammad Aditya Hilmy",
     role: ENGINEER_ROLE,
-    experience1: "Openlab Summer Student, CERN",
-    experience2: "Student Developer, Google Summer of Code 2020 with CERN-HSF",
+    experience1: "Openlab Summer Student at CERN",
+    experience2:
+      "Student Developer at Google Summer of Code 2020 with CERN-HSF",
     imgUrl: "https://i.ibb.co/f8rLDkp/Muhammad-Aditya-Hilmy.jpg",
   },
   {
@@ -50,7 +51,7 @@ export const mentors = [
     name: "Ardysatrio Fakhri Haroen",
     role: DATA_ROLE,
     experience1: "AI Research Engineer at Bukalapak",
-    experience2: "Software Engineer Intern in Shopee",
+    experience2: "Software Engineer Intern at Shopee",
     imgUrl: "https://i.ibb.co/LNRG2J8/Ardysatrio-Fakhri-Haroen.jpg",
   },
   {
@@ -93,15 +94,15 @@ export const mentors = [
   {
     name: "Luthfi Eko Trinowo",
     role: ENGINEER_ROLE,
-    experience1: "Software Engineer OY! Indonesia",
-    experience2: "Backend Engineer SIRCLO",
+    experience1: "Software Engineer at OY! Indonesia",
+    experience2: "Backend Engineer at SIRCLO",
     imgUrl: "https://i.ibb.co/zSXnDsJ/Luthfi-Eko.jpg",
   },
   {
     name: "Claudia Renata",
     role: PRODUCT_ROLE,
-    experience1: "Product managament intern in  GDP Labs",
-    experience2: "Product associate intern in Hipe Indonesia",
+    experience1: "Product Managament Intern at GDP Labs",
+    experience2: "Product Associate Intern at Hipe Indonesia",
     imgUrl: "https://i.ibb.co/dJM4n3q/Claudia-Renata.jpg",
   },
   {
