@@ -14,4 +14,4 @@ export const formEntry = {
 const formID = "1gFr4tTkGWirrkZqdp8-P_kASwJpTMfeqsiVHKPIx8SI"
 export const formUrl = `https://docs.google.com/forms/d/${formID}/formResponse`
 
-export const apiUrl = `https://script.google.com/macros/s/AKfycbzUqCXwrCopVFhvtIgAhO_QcZzlrOd3O-lvUFHbNAqhc25szymGpnir7r2hWIsWrnFf/exec`;
+export const apiUrl = `https://script.google.com/macros/s/AKfycbyMyG9GrOen9pAjSu0RA3wcT7dJgh-YPSJxhSIcN8mVHlfM2Ih7ffuT30UsaZX6w0_u/exec`;
