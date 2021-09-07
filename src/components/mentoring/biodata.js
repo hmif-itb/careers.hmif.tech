@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from "react"
+import React, { useState, useMemo } from "react"
 import { MenuItem, Select, Typography } from "@material-ui/core"
 import {
   DATA_ROLE,
@@ -8,28 +8,29 @@ import {
   PRODUCT_ROLE,
 } from "../../constants/mentors"
 import MentorCard from "./mentorCard"
+import "./index.css"
+import { useWidth } from "../../helpers/hooks"
+
+const mentorsEngineer = mentors.filter(mentor => mentor.role === ENGINEER_ROLE)
+const mentorsData = mentors.filter(mentor => mentor.role === DATA_ROLE)
+const mentorsProduct = mentors.filter(mentor => mentor.role === PRODUCT_ROLE)
+
+const mentorAll = [
+  {
+    role: ENGINEER_ROLE,
+    mentors: mentorsEngineer,
+  },
+  {
+    role: DATA_ROLE,
+    mentors: mentorsData,
+  },
+  {
+    role: PRODUCT_ROLE,
+    mentors: mentorsProduct,
+  },
+]
 
 const Biodata = () => {
-  const mentorsEngineer = mentors.filter(
-    mentor => mentor.role === ENGINEER_ROLE
-  )
-  const mentorsData = mentors.filter(mentor => mentor.role === DATA_ROLE)
-  const mentorsProduct = mentors.filter(mentor => mentor.role === PRODUCT_ROLE)
-  const mentorAll = [
-    {
-      role: ENGINEER_ROLE,
-      mentors: mentorsEngineer,
-    },
-    {
-      role: DATA_ROLE,
-      mentors: mentorsData,
-    },
-    {
-      role: PRODUCT_ROLE,
-      mentors: mentorsProduct,
-    },
-  ]
-
   const [select, setSelect] = useState(ALL_ROLES)
 
   const mentorData = useMemo(() => {
@@ -37,15 +38,23 @@ const Biodata = () => {
     return mentorAll.filter(data => data.role === select)
   }, [select])
 
+  const { isLargeScreen } = useWidth()
+
   return (
     <>
-      <div className="d-flex justify-content-center">
+      <div
+        className="d-flex justify-content-center mentoring-slide-wrapper"
+        style={{
+          width: isLargeScreen ? "60%" : "100%",
+          paddingTop: isLargeScreen ? "35%" : "56.25%",
+          marginLeft: isLargeScreen ? "20%" : "0",
+        }}
+      >
         <iframe
           src="https://docs.google.com/presentation/d/e/2PACX-1vTblelnEBFp-QWlRaAn38KzbI7K3TORytTlHG2rqW_jKih-E2TLkt3OmZRH13ptBTEpTdke1ZGBTtio/embed?start=false&loop=false&delayms=3000"
           frameborder="0"
-          width="70%"
-          style={{ margin: "auto" }}
-          height="500px"
+          id="mentoring-slide"
+          title="Slide"
           allowfullscreen="true"
           mozallowfullscreen="true"
           webkitallowfullscreen="true"
