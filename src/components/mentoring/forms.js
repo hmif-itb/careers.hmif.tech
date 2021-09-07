@@ -37,20 +37,18 @@ const MentoringForm = () => {
 
   const submitGoogleForm = (url, formData) => {
     const config = {
+      body: formData,
+      method: "post",
       mode: "no-cors",
-      headers: {
-        "content-type": "multipart/form-data",
-      },
     }
 
-    axios
-    .post(url, formData, config)
+    fetch(url, config)
     .then(_ => {
       addAlert(`Your information is successfully submitted`, "success")
       document.getElementById("submit-form").reset()
     })
     .catch(_ => {
-      addAlert(`Your information is successfully submitted`, "success")
+      addAlert(`Submission failed, please retry`)
       document.getElementById("submit-form").reset()
     })
   }
