@@ -9,7 +9,7 @@ import {
 } from "../../constants/mentors"
 import MentorCard from "./mentorCard"
 import "./index.css"
-import { useWidth } from "../../helpers/hooks"
+import { useWindowSize } from "react-use"
 
 const mentorsEngineer = mentors.filter(mentor => mentor.role === ENGINEER_ROLE)
 const mentorsData = mentors.filter(mentor => mentor.role === DATA_ROLE)
@@ -38,7 +38,9 @@ const Biodata = () => {
     return mentorAll.filter(data => data.role === select)
   }, [select])
 
-  const { isLargeScreen } = useWidth()
+  const { width } = useWindowSize()
+
+  const isLargeScreen = useMemo(() => width > 767, [width])
 
   return (
     <>
