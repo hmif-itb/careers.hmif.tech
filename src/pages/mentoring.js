@@ -21,6 +21,7 @@ import {
 import axios from "axios"
 import { encodeBase64 } from "../utils"
 import MentoringHead from "../components/mentoring/MentoringHead"
+import { Helmet } from "react-helmet"
 
 const careerPaths = [
   {
@@ -76,7 +77,6 @@ const Mentoring = () => {
           });
       })
       .then(res => {
-        console.log(res + " haha")
         const url = formUrl
     
         let formData = new FormData(event.target)
@@ -108,6 +108,17 @@ const Mentoring = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Mentoring | Career HMIF ITB</title>
+        <meta name="title" content="Mentoring | Career HMIF ITB" />
+        <meta
+          name="description"
+          content="Join us and be part of our cool mentoring program"
+        />
+        <link rel="icon" href="favicon.ico" type="image/png"></link>
+      </Helmet>
+
       <MentoringHead />
       <Layout>
         <Biodata />
@@ -124,14 +135,28 @@ const Mentoring = () => {
               }}
             >
               <div className="d-md-flex justify-content-between">
-                <TextField label="Name" className="name-input mt-4" name={formEntry.name}/>
+                <TextField 
+                  label="Name" 
+                  className="name-input mt-4" 
+                  required 
+                  variant="filled" 
+                  name={formEntry.name}
+                />
               </div>
-              <div className="d-md-flex justify-content-between name-nim-id-container">
-                <TextField label="Email" className="email-input mt-4" name={formEntry.email}/>
+              <div className="d-md-flex justify-content-between email-nim-id-container">
+                <TextField 
+                  label="Email" 
+                  className="email-input mt-4" 
+                  name={formEntry.email}
+                  required
+                  variant="filled"
+                />
                 <div className="d-flex justify-content-between nim-id-container mt-4">
                   <TextField
                     label="NIM"
+                    variant="filled"
                     style={{ width: "47.5%" }}
+                    required
                     className="nim-id-input"
                     name={formEntry.NIM}
                   />
@@ -140,15 +165,19 @@ const Mentoring = () => {
                     style={{ width: "47.5%" }}
                     className="nim-id-input"
                     name={formEntry.idLine}
+                    required
+                    variant="filled"
                   />
                 </div>
               </div>
 
               <div className="mt-4">
                 <TextField
-                  id="outlined-multiline-static"
+                  className="outlined-multiline-static"
                   label="Personal goal"
                   multiline
+                  variant="filled"
+                  required
                   rows={5}
                   style={{
                     width: "100%",
@@ -156,18 +185,22 @@ const Mentoring = () => {
                   name={formEntry.personalGoal}
                 />
                 <Typography variant="caption">
-                  Elaborasikan goal dua bulan yang ingin anda dicapai dengan
-                  mentoring ini. Goal ini akan menjadi fokus mentor untuk
-                  membantu anda.
+                  <span>
+                    Elaborasikan goal dua bulan yang ingin anda capai dengan
+                    mentoring ini. Goal ini akan menjadi fokus mentor untuk
+                    membantu anda.
+                  </span>
                   <br />
-                  <em>* Ingat Perhatikan aspek realita, hehehe</em>
+                  <em>* Ingat perhatikan aspek realita ya, hehehe</em>
                 </Typography>
               </div>
 
               <div className="mt-4">
                 <TextField
-                  id="outlined-multiline-static"
+                  className="outlined-multiline-static"
                   label="Hal yang ingin dipelajari selama mentoring"
+                  variant="filled"
+                  required
                   multiline
                   rows={5}
                   style={{
@@ -177,13 +210,46 @@ const Mentoring = () => {
                 />
               </div>
 
-              <div className="d-flex justify-content-between mt-5">
+              <div className="mt-4">
+                <TextField
+                  className="outlined-multiline-static"
+                  label="Kenapa kamu perlu dipilih untuk mengikuti program mentoring ini?"
+                  variant="filled"
+                  multiline
+                  rows={5}
+                  required
+                  style={{
+                    width: "100%",
+                  }}
+                  name={formEntry.whyChooseYou}
+                />
+                {/* <Typography variant="caption">Santai aja ya</Typography> */}
+              </div>
+
+              <div className="mt-4">
+                <TextField
+                  className="outlined-multiline-static"
+                  label="Apa kesibukanmu selama semester ini?"
+                  variant="filled"
+                  required
+                  multiline
+                  rows={5}
+                  style={{
+                    width: "100%",
+                  }}
+                  name={formEntry.activity}
+                />
+              </div>
+
+              <div className="d-md-flex justify-content-between mt-4">
                 <div className="pref-container mt-4">
                   <TextField
                     id="filled-select-currency"
+                    variant="filled"
+                    required
                     select
-                    label="First preference"
-                    helperText="Please select your career path preference"
+                    label="Preferensi pertama"
+                    helperText="Pilih preferensi jalur mentoring pertama"
                     style={{
                       width: "100%",
                     }}
@@ -200,8 +266,9 @@ const Mentoring = () => {
                   <TextField
                     id="filled-select-currency"
                     select
-                    label="Second preference"
-                    helperText="Please select your career path preference"
+                    variant="filled"
+                    label="Preferensi kedua"
+                    helperText="Pilih preferensi jalur mentoring kedua"
                     style={{
                       width: "100.5%",
                     }}
@@ -216,7 +283,7 @@ const Mentoring = () => {
                 </div>
               </div>
 
-              <div className="mt-3">
+              <div className="mt-4">
                 <Typography variant="body1">CV (bila ada)</Typography>
                 <input 
                   type="file" 
@@ -232,39 +299,40 @@ const Mentoring = () => {
                 {file ? <Typography variant="body1">{file[0].name}</Typography> : null}
               </div>
 
-              <div className="mt-5">
+              <div className="mt-4">
                 <Typography variant="body1">
                   Apakah kamu bisa berkomitmen untuk menjalankan proses mentoring
                   selama 2 bulan jika diterima ?
                 </Typography>
-                <Typography variant="caption">
-                  *TCD akan memegang uang deposit Rp100.000. Uang deposit tidak
-                  akan dikembalikan jika kamu gagal mengikuti program mentoring
-                  hingga akhir.
-                </Typography>
                 <div>
                   <FormControlLabel
                     control={
-                      <Checkbox name={formEntry.commit} color="primary" required={true} value="Ya"/>
+                      <Checkbox name={formEntry.commit} size="small" color="primary" required={true} value="Ya"/>
                     }
                     label="Jelas dong"
-                    aria-required={true}
                   />
-                </div>
-
-                <div className="d-flex justify-content-center">
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    className="mt-5"
-                    type="submit"
-                    style={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    Submit Registration
-                  </Button>
-                </div>
+                </div>{" "}
+                <Typography variant="caption">
+                  *Sebagai bentuk komitmen, TCD akan memegang uang deposit
+                  Rp100.000 dari mentee.
+                  <br />
+                  Uang deposit tidak akan dikembalikan jika kamu gagal mengikuti
+                  program mentoring hingga akhir.
+                </Typography>
+              </div>
+              <div className="d-flex justify-content-center">
+                <Button
+                  color="primary"
+                  variant="contained"
+                  className="mt-5 mb-3"
+                  type="submit"
+                  size="large"
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  Submit Registration
+                </Button>
               </div>
             </form>
           </FormGroup>
@@ -289,6 +357,9 @@ const Mentoring = () => {
       </Layout>
       <style>
         {`
+        .MuiTypography-caption, .MuiTypography-caption > * {
+          line-height: 70%;
+        }
           .name-input {
             width: 100%;
           }

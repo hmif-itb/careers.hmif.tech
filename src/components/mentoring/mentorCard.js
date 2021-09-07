@@ -16,7 +16,7 @@ const MentorCard = ({ mentor }) => {
         className="d-flex flex-md-column"
       >
         <div className="mentor-image-container">
-          <img src={mentor.imgUrl} alt="mentor-image" />
+          <img src={mentor.imgUrl} alt={mentor.name} />
         </div>
         <div className="mentor-desc">
           <Typography variant="body1" className="mentor-name">
@@ -25,7 +25,7 @@ const MentorCard = ({ mentor }) => {
           <Typography variant="body2" className="mentor-experience">
             1. {mentor.experience1}
           </Typography>
-          {mentor.experience2 != "-" && (
+          {mentor.experience2 !== "-" && (
             <Typography variant="body2" className="mentor-experience">
               2. {mentor.experience2}
             </Typography>
