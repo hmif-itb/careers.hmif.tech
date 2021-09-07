@@ -11,7 +11,7 @@ import React, { useState, useRef } from "react"
 import "./index.css"
 import axios from "axios"
 import { useAlert } from "../../contexts/AlertContext"
-import { formEntry, formUrl, apiUrl } from "../../constants/gform"
+import { formEntry, formUrl, apiUrl } from "../../constants/mentors"
 import { encodeBase64 } from "../../helpers/utils"
 
 const careerPaths = [

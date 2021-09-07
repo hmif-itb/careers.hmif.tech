@@ -7,7 +7,7 @@ import {
   mentors,
   PRODUCT_ROLE,
 } from "../../constants/mentors"
-import MentorCard from "./mentorCard"
+import MentorCard from "./card"
 import "./index.css"
 import { useWindowSize } from "react-use"
 
@@ -48,7 +48,7 @@ const Biodata = () => {
         className="d-flex justify-content-center mentoring-slide-wrapper"
         style={{
           width: isLargeScreen ? "60%" : "100%",
-          paddingTop: isLargeScreen ? "35%" : "56.25%",
+          paddingTop: isLargeScreen ? "36.5%" : "66.25%",
           marginLeft: isLargeScreen ? "20%" : "0",
         }}
       >

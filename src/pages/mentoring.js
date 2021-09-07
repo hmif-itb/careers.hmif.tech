@@ -5,7 +5,7 @@ import AppWrapper from "../components/app"
 import Layout from "../components/layout"
 
 import Biodata from "../components/mentoring/biodata"
-import MentoringHead from "../components/mentoring/MentoringHead"
+import MentoringHead from "../components/mentoring/head"
 import MentoringForm from "../components/mentoring/forms"
 
 const Mentoring = () => {
