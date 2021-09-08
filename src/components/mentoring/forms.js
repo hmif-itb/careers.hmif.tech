@@ -77,6 +77,9 @@ const MentoringForm = () => {
     })
     .then(res => {
       formData.append(formEntry.cvUrl, res)
+      if (!pref2) {
+        formData.delete(`${formEntry.pref2}`);
+      }
       submitGoogleForm(formUrl, formData)
     })
     .catch(err => {
@@ -86,6 +89,9 @@ const MentoringForm = () => {
 
   const submitWithoutFile = (formData) => {
     formData.append(formEntry.cvUrl, "no CV uploaded")
+    if (!pref2) {
+      formData.delete(`${formEntry.pref2}`);
+    }
     submitGoogleForm(formUrl, formData)
   }  
 
@@ -289,6 +295,9 @@ const MentoringForm = () => {
                       {option.label}
                     </MenuItem>
                   ))}
+                  <MenuItem key="no" value={undefined}>
+                    {`(Leave blank)`}
+                  </MenuItem>
                 </TextField>
               </div>
             </div>
