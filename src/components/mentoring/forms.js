@@ -142,11 +142,11 @@ const MentoringForm = () => {
                   onInvalid: e => {
                     e.target.setCustomValidity("");
                     if (!e.target.validity.valid) {
-                      e.target.setCustomValidity("Pastikan kamu anak HMIF angkatan 19 atau 20 ya, dan NIM-nya sudah benar!")
+                      e.target.setCustomValidity("Pastikan kamu anak HMIF angkatan 18, 19 atau 20 ya, dan NIM-nya sudah benar!")
                     }
                   },
                   onInput: e => {
-                    e.target.setCustomValidity("Pastikan kamu anak HMIF angkatan 19 atau 20 ya, dan NIM-nya sudah benar!")
+                    e.target.setCustomValidity("Pastikan kamu anak HMIF angkatan 18, 19 atau 20 ya, dan NIM-nya sudah benar!")
                     e.target.reportValidity();
                   }
                 }}
