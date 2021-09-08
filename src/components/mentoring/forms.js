@@ -240,6 +240,21 @@ const MentoringForm = () => {
               />
             </div>
 
+            <div className="mt-4">
+              <TextField
+                className="outlined-multiline-static"
+                label="Ekspektasi magang tahun depan"
+                variant="filled"
+                required
+                name={formEntry.expectation}
+              />
+              <Typography variant="caption">
+                <span>
+                  Detailkan ya magangnya di mana dan sebagai apa.
+                </span>
+              </Typography>
+            </div>
+
             <div className="d-md-flex justify-content-between mt-4">
               <div className="pref-container mt-4">
                 <TextField
