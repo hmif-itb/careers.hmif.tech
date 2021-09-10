@@ -2,6 +2,16 @@
   position: relative;
   overflow: hidden;
 }
+
+.place-center {
+  display: grid;
+  place-items: center;
+}
+
+.doughnut-wrapper {
+  width: 70%;
+}
+
 #mentoring-slide {
   position: absolute;
   top: 0;
