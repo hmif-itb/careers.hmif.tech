@@ -39,35 +39,54 @@ const MentoringStatistic = () => {
     
   return (
     <>
-      <div>
-        {fetching ?
-          <>
+      {fetching ?
+        <div className="d-flex flex-column">
+          <div className="text-center">
             <CircularProgress
               size={60}
             />
-            <Typography variant="h4">
-              {`Loading live registrants data...`}
+          </div>
+          <Typography variant="h6" className="text-center">
+            {`Loading live registrants data...`}
+          </Typography>
+        </div>        
+        :
+        <div className="d-flex justify-content-around">
+          <div className="w-60 d-flex flex-column">
+            <Typography variant="h4" className="text-center">
+              Registrant first track preference
             </Typography>
-          </>
-          :
-          <>
-            <Doughnut 
-              data={{
-                datasets: [{
-                  label: 'First Preference',
-                  data: stat,
-                  backgroundColor: chartColor,
-                  hoverOffset: 4
-                }],
-                labels: chartLabel,
-              }}
-            />
-            <Typography>
-              Participant count: {count}
+            <div className="mt-4" />
+            <div>
+              <Doughnut
+                height={500}
+                width={500}
+                options={{ 
+                  maintainAspectRatio: false,
+                }}
+                data={{
+                  datasets: [{
+                    label: 'First Preference',
+                    data: stat,
+                    backgroundColor: chartColor,
+                    hoverOffset: 4
+                  }],
+                  labels: chartLabel,
+                }}
+              />
+            </div>
+          </div>
+          <div className="w-40 d-flex flex-column align-self-center">
+            <Typography variant="h4" className="text-center">
+              Registrant count
             </Typography>
-          </>
-        }
-      </div>
+            <Typography variant="h1" className="text-center">
+              {count}
+            </Typography>
+          </div>
+        </div>
+      }
+      <div className="mt-5" />
     </>
   )
 }
