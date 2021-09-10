@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 
 import Biodata from "../components/mentoring/biodata"
 import MentoringHead from "../components/mentoring/head"
+import MentoringStatistic from "../components/mentoring/statistic"
 import MentoringForm from "../components/mentoring/forms"
 
 const Mentoring = () => {
@@ -26,6 +27,7 @@ const Mentoring = () => {
         <MentoringHead />
         <Layout>
           <Biodata />
+          <MentoringStatistic />
           <MentoringForm />
         </Layout>
       </AppWrapper>
