@@ -8,6 +8,7 @@ import Biodata from "../components/mentoring/biodata"
 import MentoringHead from "../components/mentoring/head"
 import MentoringStatistic from "../components/mentoring/statistic"
 import MentoringForm from "../components/mentoring/forms"
+import MentoringSlide from "../components/mentoring/slide"
 
 const Mentoring = () => {
   return (
@@ -26,8 +27,9 @@ const Mentoring = () => {
 
         <MentoringHead />
         <Layout>
-          <Biodata />
+          <MentoringSlide />
           <MentoringStatistic />
+          <Biodata />
           <MentoringForm />
         </Layout>
       </AppWrapper>

@@ -9,7 +9,6 @@ import {
 } from "../../constants/mentors"
 import MentorCard from "./card"
 import "./index.css"
-import { useWindowSize } from "react-use"
 
 const mentorsEngineer = mentors.filter(mentor => mentor.role === ENGINEER_ROLE)
 const mentorsData = mentors.filter(mentor => mentor.role === DATA_ROLE)
@@ -38,30 +37,8 @@ const Biodata = () => {
     return mentorAll.filter(data => data.role === select)
   }, [select])
 
-  const { width } = useWindowSize()
-
-  const isLargeScreen = width > 767
-
   return (
     <>
-      <div
-        className="d-flex justify-content-center mentoring-slide-wrapper"
-        style={{
-          width: isLargeScreen ? "60%" : "100%",
-          paddingTop: isLargeScreen ? "36.5%" : "66.25%",
-          marginLeft: isLargeScreen ? "20%" : "0",
-        }}
-      >
-        <iframe
-          src="https://docs.google.com/presentation/d/e/2PACX-1vTblelnEBFp-QWlRaAn38KzbI7K3TORytTlHG2rqW_jKih-E2TLkt3OmZRH13ptBTEpTdke1ZGBTtio/embed?start=false&loop=false&delayms=3000"
-          frameBorder="0"
-          id="mentoring-slide"
-          title="Slide"
-          allowFullScreen={true}
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"
-        ></iframe>
-      </div>
       <div className="d-flex justify-content-center mt-5 mb-5">
         <Typography variant="h4">
           Meet

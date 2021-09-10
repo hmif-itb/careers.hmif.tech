@@ -38,7 +38,7 @@ const MentoringStatistic = () => {
   }, [])
     
   return (
-    <>
+    <div className="m-5">
       {fetching ?
         <div className="d-flex flex-column">
           <div className="text-center">
@@ -54,7 +54,7 @@ const MentoringStatistic = () => {
         <div className="d-flex justify-content-around">
           <div className="w-60 d-flex flex-column">
             <Typography variant="h4" className="text-center">
-              Registrant first track preference
+              Registrant's first track preference
             </Typography>
             <div className="mt-4" />
             <div>
@@ -86,8 +86,7 @@ const MentoringStatistic = () => {
           </div>
         </div>
       }
-      <div className="mt-5" />
-    </>
+    </div>
   )
 }
 
