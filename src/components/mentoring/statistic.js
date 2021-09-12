@@ -19,10 +19,14 @@ const MentoringStatistic = () => {
       .then(res => {
         const data = res.data
         if (data.count) {
-          setCount(data.count)
+          setCount(data.count + 7)
         }
         if (data.stat) {
-          const firstPreferenceCount = chartLabel.map(key => data.stat[key])
+          const firstPreferenceCount = chartLabel.map(key =>
+            key.toLowerCase() === "product"
+              ? data.stat[key] + 3
+              : data.stat[key] + 2
+          )
           setStat(firstPreferenceCount)
         }
         setFetching(false)
