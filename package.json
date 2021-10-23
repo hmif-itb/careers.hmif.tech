@@ -30,7 +30,7 @@
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-theme-material-ui": "^2.0.1",
-    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-remark": "^4.11.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "prismjs": "^1.24.1",
     "react": "^17.0.1",
@@ -38,6 +38,7 @@
     "react-chartjs-2": "^3.0.4",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
     "react-material-ui-carousel": "^2.3.1",
     "react-use": "^17.3.1",
     "typeface-lato": "^1.1.13",
@@ -45,7 +46,11 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
-    "prettier": "2.3.2"
+    "autoprefixer": "^10.3.7",
+    "gatsby-plugin-postcss": "^5.0.0",
+    "postcss": "^8.3.11",
+    "prettier": "2.3.2",
+    "tailwindcss": "^2.2.17"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
