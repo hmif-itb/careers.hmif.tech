@@ -18,10 +18,7 @@ const Mentoring = () => {
           <meta charSet="utf-8" />
           <title>Career HMIF ITB</title>
           <meta name="title" content="Career HMIF ITB" />
-          <meta
-            name="description"
-            content="Career. Commitment. Growth"
-          />
+          <meta name="description" content="Career. Commitment. Growth" />
           <link rel="icon" href="favicon.ico" type="image/png"></link>
         </Helmet>
 

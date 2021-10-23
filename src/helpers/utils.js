@@ -19,9 +19,9 @@ export const getCareerPathSlug = slug =>
 
 export const computeEdges = (edges, slug) => {
   return edges
-    .filter(edge => edge.node.frontmatter.slug.includes(slug))
+    .filter(edge => edge?.node?.frontmatter?.slug?.includes(slug))
     .sort((edge1, edge2) =>
-      edge1.node.frontmatter.title > edge2.node.frontmatter.title ? 1 : -1
+      edge1?.node?.frontmatter?.title > edge2?.node?.frontmatter?.title ? 1 : -1
     )
 }
 
