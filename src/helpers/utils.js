@@ -27,9 +27,9 @@ export const computeEdges = (edges, slug) => {
 
 export const getTitle = slug => {
   const temp = slug
-    .slice(1)
-    .split("-")
-    .map(t => t[0].toUpperCase() + t.substring(1))
-    .join(" ")
-  return temp === "Ui Ux" ? "UI/UX Competition" : temp
+    ?.slice(1)
+    ?.split("-")
+    ?.map(t => t[0]?.toUpperCase() + t?.substring(1))
+    ?.join(" ")
+  return temp
 }

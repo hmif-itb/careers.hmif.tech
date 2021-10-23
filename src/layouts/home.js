@@ -33,7 +33,7 @@ const HomeLayout = () => {
             />
           </div>
           <div className="mt-4">
-            <div className="text-lg font-sans text-left text-center text-white">
+            <div className="text-lg font-sans text-center text-white">
               <div>Apa saja sih bidang-bidang Informatika di industri?</div>
               <div className="container mx-auto px-10 md:px-10">
                 <div

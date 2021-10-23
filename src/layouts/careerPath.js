@@ -25,8 +25,9 @@ const CareerPathPage = ({ location }) => {
       `}
       render={data => {
         const { edges } = data.allMarkdownRemark
-        const path = location.pathname
+        const path = location?.pathname
         const competitionSlug = getCareerPathSlug(path)
+        console.log(competitionSlug)
         const title = getTitle(competitionSlug)
         const finalEdges = computeEdges(edges, competitionSlug)
         return (
