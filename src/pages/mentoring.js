@@ -16,8 +16,8 @@ const Mentoring = () => {
       <AppWrapper>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Mentoring | Career HMIF ITB</title>
-          <meta name="title" content="Mentoring | Career HMIF ITB" />
+          <title>Career HMIF ITB</title>
+          <meta name="title" content="Career HMIF ITB" />
           <meta
             name="description"
             content="Join us and be part of our cool mentoring program"
