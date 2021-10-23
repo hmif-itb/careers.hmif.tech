@@ -20,7 +20,7 @@ const Mentoring = () => {
           <meta name="title" content="Career HMIF ITB" />
           <meta
             name="description"
-            content="Join us and be part of our cool mentoring program"
+            content="Career. Commitment. Growth"
           />
           <link rel="icon" href="favicon.ico" type="image/png"></link>
         </Helmet>
