@@ -1,67 +1,77 @@
 import React from "react"
 import { GiTrophy } from "react-icons/gi"
-
+import { IoCodeSlash, IoStorefront } from "react-icons/io5"
+import { FaMobileAlt } from "react-icons/fa"
+import { MdAnalytics } from "react-icons/md"
+import { RiDatabase2Line, RiSlideshowFill } from "react-icons/ri"
+import { HiPresentationChartBar } from "react-icons/hi"
 const CONSTANTS = {
   careerPaths: [
     {
       link: "/backend-developer",
       displayName: "Backend Developer",
+      icon: <IoCodeSlash className="field-icon" />,
     },
     {
       link: "/frontend-developer",
       displayName: "Frontend Developer",
+      icon: <IoStorefront className="field-icon" />,
     },
     {
       link: "/mobile-developer",
       displayName: "Mobile Developer",
+      icon: <FaMobileAlt className="field-icon" />,
     },
-
     {
       link: "/data-scientist",
       displayName: "Data Scientist",
+      icon: <RiDatabase2Line className="field-icon" />,
     },
     {
       link: "/data-analyst",
       displayName: "Data Analyst",
+      icon: <MdAnalytics className="field-icon" />,
     },
     {
       link: "/product-management",
       displayName: "Product Management",
+      icon: <HiPresentationChartBar className="field-icon" />,
     },
     {
       link: "/tech-consultant",
       displayName: "Tech Consultant",
+      icon: <RiSlideshowFill className="field-icon" />,
     },
   ],
   homeContents: [
     {
-      title: "Compete with HMIF!",
+      title: "HMIF Career",
       description:
-        "Bersaing adalah keseharian kami. Menjadi yang terbaik adalah minat kami. Di HMIF, kami mau Anda untuk berada di puncak dari setiap aspek kompetisi yang memungkinkan.",
+        "Karir adalah keseharian kami. Menjadi yang terbaik adalah minat kami. Di HMIF, kami mau Anda untuk berada di puncak dari setiap aspek karir yang memungkinkan.",
       logo: <GiTrophy />,
     },
-    {
-      title: `Get The Information!`,
-      description: (
-        <div>
-          Bagi kamu para pencari informasi lomba, jangan sampai ketinggalan info
-          dengan informasi lomba yang direkap di{" "}
-          <b>
-            <a href="https://bit.ly/comp-hmif" rel="noreferrer" target="_blank">
-              bit.ly/comp-hmif
-            </a>
-          </b>
-        </div>
-      ),
-    },
+    // {
+    //   title: `Get The Information!`,
+    //   description: (
+    //     <div>
+    //       Bagi kamu para pencari informasi lomba, jangan sampai ketinggalan info
+    //       dengan informasi lomba yang direkap di{" "}
+    //       <b>
+    //         <a href="https://bit.ly/comp-hmif" rel="noreferrer" target="_blank">
+    //           bit.ly/comp-hmif
+    //         </a>
+    //       </b>
+    //     </div>
+    //   ),
+    // },
     {
       title: "Learn From The Experts!",
       description: (
         <div>
-          Ingin tau cerita para pemenang HMIF? <br /> langsung saja cek{" "}
+          Ingin tau cerita para pemagang HMIF? <br /> langsung saja cek{" "}
           <b>
             <a
-              href="https://medium.com/hmif-itb/tagged/competition"
+              href="https://medium.com/hmif-itb/tagged/internships"
               rel="noreferrer"
               target="_blank"
             >

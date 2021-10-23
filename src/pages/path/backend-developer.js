@@ -1,8 +1,9 @@
 import React from "react"
-import CareerPathPage from "../layouts/careerPath"
+import CareerPathPage from "../../layouts/careerPath"
 
-export default ({ location }) => (
+const Backend = ({ location }) => (
   <div>
     <CareerPathPage slug="/backend-developer" location={location} />
   </div>
 )
+export default Backend

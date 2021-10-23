@@ -88,50 +88,33 @@ Setelah bekerja selama lebih dari 10 tahun, sebagian besar FED developer akan me
 
 Buat kalian yang pengen belajar secara otodidak/non formal, berikut aku jabarkan beberapa platform terbaik untuk pembelajaran yang tersedia diluar sana.
 
-- [CodeAcademy](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#2_CodeAcademy)
-
-- [Codeavengers.com](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#3_Codeavengerscom)
-
-- [Codeschool.com](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#4_Codeschoolcom)
-
-- [Teamtreehouse.com](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#5_Teamtreehousecom)
-
-- [Dreamincode.net](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#6_Dreamincodenet)
-
-- [Htmlandcssbook.com](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#7_Htmlandcssbookcom)
-
-- [W3schools.com](https://www.devaradise.com/id/2014/06/7-situs-terbaik-untuk-belajar-koding-websitehtml-css-php.html#1_W3schoolscom)
+- [CodeAcademy](https://www.codecademy.com/)
+- [Codeavengers.com](https://www.codeavengers.com/)
+- [Codeschool.com](https://www.codeschool.co/)
+- [Teamtreehouse.com](https://teamtreehouse.com/)
+- [Dreamincode.net](https://www.dreamincode.net/)
+- [Htmlandcssbook.com](http://www.htmlandcssbook.com/)
+- [W3schools.com](https://www.w3schools.com/)
 
 ## Front-End Interview Questions
 
 Jika kalian tertarik untuk bekerja di suatu perusahaan dalam bidang FED, berikut adalah pertanyaan yang biasanya diajukan saat interview:
 
 - [Front-End Job Interview Questions](http://h5bp.github.io/Front-end-Developer-Interview-Questions/)
-
 - [Front End Web Development Quiz](http://davidshariff.com/quiz/)
-
 - [Interview Questions for Front-End-Developer](http://thatjsdude.com/interview/index.html)
-
 - [JavaScript Web Quiz](http://davidshariff.com/js-quiz/)
-
 - [The Best Frontend JavaScript Interview Questions (written by a Frontend Engineer)](<https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-(Written-by-a-Frontend-Engineer)>)
-
 - [Front End Interview Handbook](https://github.com/yangshun/front-end-interview-handbook)
-
 - [10 Interview Questions Every JavaScript Developer Should Know](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)
 
 Dan untuk persiapannya sendiri kalian bisa mempersiapkannya dengan mempelajari melalui tautan berikut :
 
 - [Preparing for a Front-End Web Development Interview in 2017](http://davidshariff.com/blog/preparing-for-a-front-end-web-development-interview-in-2017/)
-
-- [Interview Cake](https://www.interviewcake.com/) [$]
-
+- [Interview Cake](https://www.interviewcake.com/)
 - [Cracking the front-end interview](https://medium.freecodecamp.com/cracking-the-front-end-interview-9a34cd46237)
-
 - [Front End Interview Handbook](https://github.com/yangshun/front-end-interview-handbook)
-
 - [Cracking the front-end interview](https://medium.freecodecamp.com/cracking-the-front-end-interview-9a34cd46237)
-
 - [Front End Interview Handbook](https://github.com/yangshun/front-end-interview-handbook)
 
 ## Front-End Salaries

@@ -14,7 +14,8 @@ export const encodeBase64 = async inputFile => {
   })
 }
 
-export const getCareerPathSlug = slug => "/" + slug.split("/")[1]
+export const getCareerPathSlug = slug =>
+  "/" + slug.split("/")[slug.split("/").length - 1]
 
 export const computeEdges = (edges, slug) => {
   return edges

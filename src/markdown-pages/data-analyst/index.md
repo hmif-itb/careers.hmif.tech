@@ -4,19 +4,19 @@ date: "2019-05-04"
 title: "Data Analyst"
 ---
 
-### A Bit Insight on Being a Data Analyst Intern
+# A Bit Insight on Being a Data Analyst Intern
 
-# Author: [Gerald Abraham Sianturi](https://www.linkedin.com/in/gerald-abraham-sianturi-b932b11a3/)
+### Author: [Gerald Abraham Sianturi](https://www.linkedin.com/in/gerald-abraham-sianturi-b932b11a3/)
 
-# Sebelum kita dengerin pengalaman langsung dari orang-orang yang punya pengalaman intern sebagai _data analyst_, kuy kita kenalan sama _role data analyst_ and _what they really do_?
+## Sebelum kita dengerin pengalaman langsung dari orang-orang yang punya pengalaman intern sebagai _data analyst_, kuy kita kenalan sama _role data analyst_ and _what they really do_?
 
 Tiap perusahaan tuh punya pendefinisian _role_ data analyst yang berbeda beda. Tapi, secara umum, data analyst itu bekerja **mengumpulkan, membersihkan, dan menganalisa dataset** untuk membantu menyelesaikan permasalahan tertentu dari perusahaan.
 
-- _Mengumpulkan data:_ Seorang data analyst bisa saja diminta untuk mengumpulkan data dengan cara melakukan survei, _tracking_ penggunaan dan karakteristik pengguna, atau membeli _dataset_
-- _Membersihkan data:_ Ternyata _most_ data yang ada itu adalah data kotor lho, seperti data yang memiliki duplikat, nilai kosong (_null_), atau _outlier_.
-- _Pemodelan data:_ Maksudnya adalah seorang data analyst mungkin diminta untuk mendesain suatu struktur _database_, misalnya menentukan tipe data yang tepat untuk menyimpan data tabular pada suatu kolom
-- _Menafsirkan data:_ Walaupun seperti beririsan dengan role _data scientist_, perbedaannya terletak pada penemuan pola atau tren pada suatu datanya dilakukan bersifat deskriptif (menafsirkan data sekarang), berbeda dengan _data scientist_ yang penemuan pola bersifat preskriptif (menduga data yang mungkin berdasarkan data yang ada)
-- _Presentasi analisis_: Nah, di sini data analyst juga dituntut untuk bisa mengomunikasikan hasil analisisnya
+- **Mengumpulkan data:** Seorang data analyst bisa saja diminta untuk mengumpulkan data dengan cara melakukan survei, _tracking_ penggunaan dan karakteristik pengguna, atau membeli _dataset_
+- **Membersihkan data:** Ternyata _most_ data yang ada itu adalah data kotor lho, seperti data yang memiliki duplikat, nilai kosong (_null_), atau _outlier_.
+- **Pemodelan data:** Maksudnya adalah seorang data analyst mungkin diminta untuk mendesain suatu struktur _database_, misalnya menentukan tipe data yang tepat untuk menyimpan data tabular pada suatu kolom
+- **Menafsirkan data:** Walaupun seperti beririsan dengan role _data scientist_, perbedaannya terletak pada penemuan pola atau tren pada suatu datanya dilakukan bersifat deskriptif (menafsirkan data sekarang), berbeda dengan _data scientist_ yang penemuan pola bersifat preskriptif (menduga data yang mungkin berdasarkan data yang ada)
+- **Presentasi analisis**: Nah, di sini data analyst juga dituntut untuk bisa mengomunikasikan hasil analisisnya
 
 **Selanjutnya nih, kita lanjut memahami _point of view_ orang yang pernah intern sebagai data analyst**
 

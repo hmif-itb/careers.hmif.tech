@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <header className="bg-hmif-yellow w-full">
-      <div className="p-3 px-6 md:px-48">
+      <div className="py-2 px-6 md:px-48">
         <div className="font-heading font-bold text-center text-black leading-none text-4xl my-3">
           {siteTitle}
         </div>

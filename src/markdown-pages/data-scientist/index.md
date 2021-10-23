@@ -6,7 +6,7 @@ title: "Data Scientist"
 
 # Menjadi Salah Satu Pekerjaan yang Sedang Naik Daun, Yuk Kenalan dengan _Data Scientist_!
 
-##### by Leoni Antoinette (www.linkedin.com/in/leoniantoinette)
+##### by [Leoni Antoinette](www.linkedin.com/in/leoniantoinette)
 
 ## **Apa itu _Data Scientist_?**
 

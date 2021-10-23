@@ -62,7 +62,21 @@
   --color-accent: #d1dce5;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 /* HTML elements */
+.field-icon {
+  max-width: 100%;
+  width: 4rem;
+  text-align: center;
+  height: 4rem;
+  font: var(--fontSize-6);
+}
+.field-icon {
+  fill: rgb(248, 192, 51);
+}
 
 *,
 :after,
@@ -90,10 +104,6 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  padding: var(--spacing-6) var(--spacing-0);
-}
-
 hr {
   background: var(--color-accent);
   height: 1px;
@@ -110,7 +120,8 @@ h5,
 h6 {
   font-family: var(--font-heading);
   margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-6);
+  /* margin-bottom: var(--spacing-6); */
+  color: white !important;
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
 }
@@ -128,22 +139,29 @@ h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
+  margin-bottom: var(--spacing-12) !important;
 }
 
 h2 {
   font-size: var(--fontSize-5);
+  margin-bottom: var(--spacing-6) !important;
+  margin-top: var(--spacing-8) !important;
 }
 
 h3 {
   font-size: var(--fontSize-4);
+  margin-bottom: var(--spacing-2) !important;
+  margin-top: var(--spacing-4) !important;
 }
 
 h4 {
   font-size: var(--fontSize-3);
+  margin-bottom: var(--spacing-2) !important;
 }
 
 h5 {
   font-size: var(--fontSize-2);
+  margin-bottom: var(--spacing-1) !important;
 }
 
 h6 {
@@ -170,7 +188,7 @@ p {
   line-height: var(--lineHeight-relaxed);
   --baseline-multiplier: 0.179;
   --x-height-multiplier: 0.35;
-  margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-6) var(--spacing-0) !important;
   padding: var(--spacing-0);
 }
 
@@ -204,7 +222,7 @@ li > ul {
 }
 
 blockquote {
-  color: var(--color-text-light);
+  color: white;
   margin-left: calc(-1 * var(--spacing-6));
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
@@ -237,7 +255,7 @@ table thead tr th {
 /* Link */
 
 a {
-  color: var(--color-primary);
+  color: rgb(248, 192, 51) !important;
 }
 
 a:hover,
@@ -343,7 +361,6 @@ footer {
   width: 100%;
   /* height: 50px; */
   font-family: Montserrat;
-  margin-top: 2rem;
   --bg-opacity: 1;
   background-color: #f8c033;
   background-color: rgba(248, 192, 51, var(--bg-opacity));

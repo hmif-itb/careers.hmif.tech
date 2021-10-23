@@ -1,8 +1,8 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { computeEdges, getTitle, getCareerPathSlug } from "../helpers/utils"
 
 const CareerPathPage = ({ location }) => {
@@ -31,15 +31,15 @@ const CareerPathPage = ({ location }) => {
         const finalEdges = computeEdges(edges, competitionSlug)
         return (
           <>
-            <div className="mx-auto min-h-screen">
-              <SEO title={title} />
+            <div className="mx-auto min-h-screen bg-gray-900 text-white">
+              <Seo title={title} />
               <Header siteTitle={title} />
-              <div className="container mt-10">
+              <div className="pt-10 container-md pb-4 lg:px-24 xl:px-32">
                 {finalEdges.map(edge => {
                   const siteData = edge.node.frontmatter
                   const { html } = edge.node
                   return (
-                    <div key={siteData.title}>
+                    <div key={siteData.title} className="web-content">
                       <div dangerouslySetInnerHTML={{ __html: html }} />
                     </div>
                   )
